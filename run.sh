@@ -63,3 +63,5 @@ then
 echo "You chose script 5"
 
 fi
+
+exec ./run.sh
