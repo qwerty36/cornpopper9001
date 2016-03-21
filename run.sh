@@ -4,6 +4,7 @@ clear
 echo "$(tput setaf 2)"
 echo "starting script..."
 sleep 1
+mpg123 song1.mp3 &
 echo
 echo
 echo
@@ -86,4 +87,4 @@ echo "$(tput setaf 2)"
 fi
 
 sleep 2.5
-exec ./run.sh
+exec ./run2.sh
