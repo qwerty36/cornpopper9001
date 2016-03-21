@@ -11,7 +11,7 @@ char main(){
    
    if (strcmp(answer, "juist") == 0){
 	   printf("it passed\n");
-	   status = system("python test.py");
+	   status = system("python test.py true false");
 	   exit(0);
    }
 
