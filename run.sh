@@ -10,7 +10,7 @@ if pgrep "mpg123" > /dev/null
 then
     echo 
 else
-    mpg123 -Z song1.mp3 &
+    mpg123 -Z song2.mp3 &
     echo
     echo "Music started!"
 fi
