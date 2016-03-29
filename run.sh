@@ -6,14 +6,14 @@ echo "starting script..."
 sleep 1
 
 
-if pgrep "mpg123" > /dev/null
-then
-    echo 
-else
-    mpg123 -Z song2.mp3 &
-    echo
-    echo "Music started!"
-fi
+#if pgrep "mpg123" > /dev/null
+#then
+#    echo 
+#else
+#    mpg123 -Z song2.mp3 &
+#    echo
+#    echo "Music started!"
+#fi
 
 
 echo
