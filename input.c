@@ -226,11 +226,9 @@ char main(){
    
    
    
-   
-   if (strcmp(answer, "juist") == 0){
-	   printf("it passed\n");
-	   status = system(command);
-	   exit(0);
+
+	status = system(command);
+	exit(0);
    }
 
    return 'a';
