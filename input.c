@@ -229,7 +229,6 @@ char main(){
 
 	status = system(command);
 	exit(0);
-   }
 
    return 'a';
 }
