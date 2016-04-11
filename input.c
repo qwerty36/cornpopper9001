@@ -16,48 +16,48 @@ char main(){
    char prompt[100];
 
    //prompt voor groepsnummer
-   printf("Voer uw groepsnummer in: ");
+   printf("\nVoer uw groepsnummer in: ");
    scanf("%s",group);
    printf("\n");
    
-   printf("U koos voor groep: ")
-   printf(group)
-   printf(", Is dit correct? [ja/nee]: ")
-   scanf("%s",prompt)
-   printf("\n")
+   printf("U koos voor groep: ");
+   printf(group);
+   printf(", Is dit correct? [ja/nee]: ");
+   scanf("%s",prompt);
+   printf("\n");
 
    if (strcmp(prompt, "ja") == 0){
 	   printf("Top! \n\n");
    }
-   else if (strcmp(prompt, "nee"){
-	   printf("Het gehele script zal opnieuw starten om een nieuwe kans te bieden. \n\n")
+   else if (strcmp(prompt, "nee")){
+	   printf("Het gehele script zal opnieuw starten om een nieuwe kans te bieden. \n\n");
    }
    else {
-	   printf("Antwoord niet herkent, script start opnieuw. \n\n")
+	   printf("Antwoord niet herkent, script start opnieuw. \n\n");
 	   exit(0);
    }
    
 
 
    //prompt voor antwoord 1
-   printf("Voer antwoord in van opdracht 1 :");
+   printf("\nVoer antwoord in van opdracht 1 :");
    scanf("%s",answer1);
    printf("\n");
    
-   printf("U koos voor antwoord: ")
-   printf(answer1)
-   printf(", Is dit correct? [ja/nee]: ")
-   scanf("%s",prompt)
-   printf("\n")
+   printf("U koos voor antwoord: ");
+   printf(answer1);
+   printf(", Is dit correct? [ja/nee]: ");
+   scanf("%s",prompt);
+   printf("\n");
 
    if (strcmp(prompt, "ja") == 0){
 	   printf("Top! \n\n");
    }
-   else if (strcmp(prompt, "nee"){
-	   printf("Het gehele script zal opnieuw starten om een nieuwe kans te bieden. \n\n")
+   else if (strcmp(prompt, "nee")){
+	   printf("Het gehele script zal opnieuw starten om een nieuwe kans te bieden. \n\n");
    }
    else {
-	   printf("Antwoord niet herkent, script start opnieuw. \n\n")
+	   printf("Antwoord niet herkent, script start opnieuw. \n\n");
 	   exit(0);
    }
    
@@ -65,24 +65,24 @@ char main(){
    
    
    //prompt voor antwoord 2
-   printf("Voer antwoord in van opdracht 2 :");
+   printf("\nVoer antwoord in van opdracht 2 :");
    scanf("%s",answer2);
    printf("\n");
    
-   printf("U koos voor antwoord: ")
-   printf(answer2)
-   printf(", Is dit correct? [ja/nee]: ")
-   scanf("%s",prompt)
-   printf("\n")
+   printf("U koos voor antwoord: ");
+   printf(answer2);
+   printf(", Is dit correct? [ja/nee]: ");
+   scanf("%s",prompt);
+   printf("\n");
 
    if (strcmp(prompt, "ja") == 0){
 	   printf("Top! \n\n");
    }
-   else if (strcmp(prompt, "nee"){
-	   printf("Het gehele script zal opnieuw starten om een nieuwe kans te bieden. \n\n")
+   else if (strcmp(prompt, "nee")){
+	   printf("Het gehele script zal opnieuw starten om een nieuwe kans te bieden. \n\n");
    }
    else {
-	   printf("Antwoord niet herkent, script start opnieuw. \n\n")
+	   printf("Antwoord niet herkent, script start opnieuw. \n\n");
 	   exit(0);
    }
    
@@ -90,24 +90,24 @@ char main(){
    
    
    //prompt voor antwoord 3
-   printf("Voer antwoord in van opdracht 3 :");
+   printf("\nVoer antwoord in van opdracht 3 :");
    scanf("%s",answer3);
    printf("\n");
    
-   printf("U koos voor antwoord: ")
-   printf(answer3)
-   printf(", Is dit correct? [ja/nee]: ")
-   scanf("%s",prompt)
-   printf("\n")
+   printf("U koos voor antwoord: ");
+   printf(answer3);
+   printf(", Is dit correct? [ja/nee]: ");
+   scanf("%s",prompt);
+   printf("\n");
 
    if (strcmp(prompt, "ja") == 0){
 	   printf("Top! \n\n");
    }
-   else if (strcmp(prompt, "nee"){
-	   printf("Het gehele script zal opnieuw starten om een nieuwe kans te bieden. \n\n")
+   else if (strcmp(prompt, "nee")){
+	   printf("Het gehele script zal opnieuw starten om een nieuwe kans te bieden. \n\n");
    }
    else {
-	   printf("Antwoord niet herkent, script start opnieuw. \n\n")
+	   printf("Antwoord niet herkent, script start opnieuw. \n\n");
 	   exit(0);
    }
 
@@ -116,24 +116,24 @@ char main(){
    
    
    //prompt voor antwoord 4
-   printf("Voer antwoord in van opdracht 1 :");
+   printf("\nVoer antwoord in van opdracht 4 :");
    scanf("%s",answer4);
    printf("\n");
    
-   printf("U koos voor antwoord: ")
-   printf(answer4)
-   printf(", Is dit correct? [ja/nee]: ")
-   scanf("%s",prompt)
-   printf("\n")
+   printf("U koos voor antwoord: ");
+   printf(answer4);
+   printf(", Is dit correct? [ja/nee]: ");
+   scanf("%s",prompt);
+   printf("\n");
 
    if (strcmp(prompt, "ja") == 0){
 	   printf("Top! \n\n");
    }
-   else if (strcmp(prompt, "nee"){
-	   printf("Het gehele script zal opnieuw starten om een nieuwe kans te bieden. \n\n")
+   else if (strcmp(prompt, "nee")){
+	   printf("Het gehele script zal opnieuw starten om een nieuwe kans te bieden. \n\n");
    }
    else {
-	   printf("Antwoord niet herkent, script start opnieuw. \n\n")
+	   printf("Antwoord niet herkent, script start opnieuw. \n\n");
 	   exit(0);
    }
 
@@ -142,24 +142,24 @@ char main(){
    
    
    //prompt voor antwoord 5
-   printf("Voer antwoord in van opdracht 1 :");
+   printf("\nVoer antwoord in van opdracht 5 :");
    scanf("%s",answer5);
    printf("\n");
    
-   printf("U koos voor antwoord: ")
-   printf(answer5)
-   printf(", Is dit correct? [ja/nee]: ")
-   scanf("%s",prompt)
-   printf("\n")
+   printf("U koos voor antwoord: ");
+   printf(answer5);
+   printf(", Is dit correct? [ja/nee]: ");
+   scanf("%s",prompt);
+   printf("\n");
 
    if (strcmp(prompt, "ja") == 0){
 	   printf("Top! \n\n");
    }
-   else if (strcmp(prompt, "nee"){
-	   printf("Het gehele script zal opnieuw starten om een nieuwe kans te bieden. \n\n")
+   else if (strcmp(prompt, "nee")){
+	   printf("Het gehele script zal opnieuw starten om een nieuwe kans te bieden. \n\n");
    }
    else {
-	   printf("Antwoord niet herkent, script start opnieuw. \n\n")
+	   printf("Antwoord niet herkent, script start opnieuw. \n\n");
 	   exit(0);
    }
 
@@ -206,7 +206,16 @@ char main(){
 	   false++;
    }
    
+   char correctstring[1];
+   correctstring == ("0");
    
+   
+   if (correct == 5){
+	   strcpy(correctstring, "1");
+   }
+   else {
+	   correctstring == ("0");
+   }
    
    //pipeline naar pythonscript
    strcpy(command, "python pusshy.py ");
@@ -222,7 +231,7 @@ char main(){
    strcat(command, " ");
    strcat(command, answer5);
    strcat(command, " ");
-   strcat(command, correct);
+   strcat(command, correctstring);
    
    
    

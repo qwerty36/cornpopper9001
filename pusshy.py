@@ -22,7 +22,10 @@ if len(sys.argv) == 8:
 
 	#will print a message that will be interpreted by the java GUI and notify the user
 	except mysql.connector.Error as err:
-		print("Something went wrong: {}".format(err))
+		if "Duplicate" in "Something went wrong: {}".format(err):
+			print ("\n\nGroep heeft antwoord al geregistreerd!\n\n")
+		else:
+			print("Something went wrong: {}".format(err))
 
 #will notify the user that the arguments dont meet the expectations
 else:
