@@ -18,7 +18,7 @@ if len(sys.argv) == 8:
 		conn.commit()
 		cursor.close()
 		conn.close()
-		print ("\npush seq done\n")
+		print ("\nResultaat doorgegeven, Dankuwel!\n")
 
 	#will print a message that will be interpreted by the java GUI and notify the user
 	except mysql.connector.Error as err:

@@ -40,7 +40,7 @@ char main(){
 
 
    //prompt voor antwoord 1
-   printf("\nVoer antwoord in van opdracht 1 :");
+   printf("\nVoer antwoord in van opdracht 1 (Elektroroom) :");
    scanf("%s",answer1);
    printf("\n");
    
@@ -65,7 +65,7 @@ char main(){
    
    
    //prompt voor antwoord 2
-   printf("\nVoer antwoord in van opdracht 2 :");
+   printf("\nVoer antwoord in van opdracht 2 (Het rad van HLO) :");
    scanf("%s",answer2);
    printf("\n");
    
@@ -90,7 +90,7 @@ char main(){
    
    
    //prompt voor antwoord 3
-   printf("\nVoer antwoord in van opdracht 3 :");
+   printf("\nVoer antwoord in van opdracht 3 (Nucleophile):");
    scanf("%s",answer3);
    printf("\n");
    
@@ -105,6 +105,7 @@ char main(){
    }
    else if (strcmp(prompt, "nee")){
 	   printf("Het gehele script zal opnieuw starten om een nieuwe kans te bieden. \n\n");
+	   exit(0);
    }
    else {
 	   printf("Antwoord niet herkent, script start opnieuw. \n\n");
@@ -116,7 +117,7 @@ char main(){
    
    
    //prompt voor antwoord 4
-   printf("\nVoer antwoord in van opdracht 4 :");
+   printf("\nVoer antwoord in van opdracht 4 (versla de computer):");
    scanf("%s",answer4);
    printf("\n");
    
@@ -131,6 +132,7 @@ char main(){
    }
    else if (strcmp(prompt, "nee")){
 	   printf("Het gehele script zal opnieuw starten om een nieuwe kans te bieden. \n\n");
+	   exit(0);
    }
    else {
 	   printf("Antwoord niet herkent, script start opnieuw. \n\n");
@@ -142,7 +144,7 @@ char main(){
    
    
    //prompt voor antwoord 5
-   printf("\nVoer antwoord in van opdracht 5 :");
+   printf("\nVoer antwoord in van opdracht 5 (Debuggen):");
    scanf("%s",answer5);
    printf("\n");
    
@@ -169,29 +171,21 @@ char main(){
 
    //check voor juiste antwoorden
    correct = 0;
-   if (strcmp(answer1, "antwoord1") == 0){
+   if (strcmp(answer1, "lightning") == 0){
 	   correct++;
    }
    else {
 	   false++;
    }
    
-   if (strcmp(answer2, "antwoord2") == 0){
+   if (strcmp(answer2, "galgje") == 0){
 	   correct++;
    }
    else {
 	   false++;
    }
    
-   if (strcmp(answer3, "antwoord3") == 0){
-	   correct++;
-   }
-   else {
-	   false++;
-   }
-   
-   
-   if (strcmp(answer4, "antwoord4") == 0){
+   if (strcmp(answer3, "cytosine") == 0){
 	   correct++;
    }
    else {
@@ -199,22 +193,36 @@ char main(){
    }
    
    
-   if (strcmp(answer5, "antwoord5") == 0){
+   if (strcmp(answer4, "analyse") == 0){
 	   correct++;
    }
    else {
 	   false++;
    }
    
-   char correctstring[1];
-   correctstring == ("0");
    
-   
-   if (correct == 5){
-	   strcpy(correctstring, "1");
+   if (strcmp(answer5, "aminozuren") == 0){
+	   correct++;
    }
    else {
-	   correctstring == ("0");
+	   false++;
+   }
+   
+   printf("\n\n\n\nVan de 5 opdrachten heeft u er: ");
+   printf("%d", correct);
+   printf(" goed, Wilt u het opnieuw proberen? [ja/nee]: ");
+   scanf("%s",prompt);
+   
+   if (strcmp(prompt, "ja") == 0){
+	   printf("Top! \n\n");
+	   exit(0);
+   }
+   else if (strcmp(prompt, "nee")){
+	   printf("Het gehele script zal opnieuw starten om een nieuwe kans te bieden. \n\n");
+   }
+   else {
+	   printf("Antwoord niet herkent, script start opnieuw. \n\n");
+	   exit(0);
    }
    
    //pipeline naar pythonscript
@@ -231,7 +239,9 @@ char main(){
    strcat(command, " ");
    strcat(command, answer5);
    strcat(command, " ");
-   strcat(command, correctstring);
+   char buffer[2];
+   sprintf(buffer, "%d", correct);
+   strcat(command, buffer);
    
    
    
