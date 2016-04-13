@@ -1,0 +1,10 @@
+GPIO
+
+relay 1: BROWN BCM 18
+realy 2: WHITE BCM 27
+relay 3: YELLOW BCM 22
+relay 4: GREY BCM 23
+relay 5: PURPLE BCM 24
+relay 6: BLUE BCM 25
+relay 7: GREEN BCM 5
+relay 8: ORANGE BCM 6

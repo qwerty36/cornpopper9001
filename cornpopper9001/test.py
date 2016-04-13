@@ -1,12 +1,12 @@
 #!/usr/bin/python
 import RPi.GPIO as GPIO
 import time
+import os
 
-GPIO.cleanup()
 GPIO.setmode(GPIO.BCM)
 
 # init list with pin numbers
-list = [18, 17, 27, 22, 23, 24, 25, 26]
+list = [24]
 
 # loop through pins and set mode and state to 'low'
 for x in list:
@@ -14,13 +14,12 @@ for x in list:
 # time to sleep between operations in the main loop
 
 SleepTime1 = 0.1
-SleepTime2 = 0.4
+SleepTime2 = 0.2
 
 # main loop
-for x in range(5):
+for x in range(100):
 	for i in list: 
 		GPIO.output(i, GPIO.HIGH)
-		print i
 		time.sleep(SleepTime2)
 		GPIO.output(i, GPIO.LOW)
 		time.sleep(SleepTime1) 

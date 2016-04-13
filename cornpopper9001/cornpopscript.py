@@ -2,12 +2,13 @@ import RPi.GPIO as GPIO
 import time
 import sys
 import threading
+import os
 
 threads = []
 
 GPIO.setmode(GPIO.BCM)
 
-pins = [18,17,27,22,23,24]
+pins = [18,27,22,23,24,25,5,6]
 
 #Setting up all pins to function as output pins
 for x in pins:
@@ -23,54 +24,28 @@ for x in pins:
 #assigning GPIO pins to variable names
 
 cornpopper9001 = 18
-solenoid = 17
+solenoid = 24
 
-"""
-LEDbank1:
-3rd Relay
-3 LEDS
-in OFF state to the color RED
-in ON state to the color GREEN
 
-LEDbank2:
-4th Relay
-3 LEDS
-in OFF state to the color GREEN
-in ON state to the color RED
+LEDbank1 = 22
+LEDbank2 = 23
 
-LEDbank 3:
-5th Relay
-3 LEDS
-in OFF state to the color GREEN
-in ON state to the color RED
-"""
-
-LEDbank1 = 27
-LEDbank2 = 22
-LEDbank3 = 23
-
-LEDbanks = [27,22,23]
+LEDbanks = [22,23]
 
 #Set time variables
 t0 = time.time()
-popcorncookingtime = 10
-LEDblinkdelay = 3
-LEDtime = popcorncookingtime + LEDblinkdelay
-
-#provides power to the LEDrelays
-GPIO.output(24, GPIO.HIGH)
-
+popcorncookingtime = 135
+#popcorncookingtime = 10
 
 def LEDbanksON():
 	interval = 0.05
-	while time.time() - t0 < LEDtime:
-		for x in LEDbanks:
-			GPIO.output(x, GPIO.HIGH)
-		time.sleep(interval)
-		for x in LEDbanks:
-			GPIO.output(x, GPIO.LOW)
-		time.sleep(interval)
-	GPIO.output(24, GPIO.LOW)
+	while time.time() - t0 < popcorncookingtime:
+		GPIO.output(22, GPIO.HIGH)
+		time.sleep(0.15)
+		GPIO.output(22, GPIO.LOW)
+		GPIO.output(23, GPIO.HIGH)
+		time.sleep(0.15)
+		GPIO.output(23, GPIO.LOW)
 
 def cornpopper9001PowerOn():
 	while time.time() - t0 < popcorncookingtime:
@@ -78,11 +53,22 @@ def cornpopper9001PowerOn():
 		time.sleep(1)
 
 	GPIO.output(cornpopper9001, GPIO.LOW)
+	GPIO.output(6, GPIO.HIGH)
+	time.sleep(0.2)
+	GPIO.output(6, GPIO.LOW)
+	time.sleep(0.2)
+	GPIO.output(6, GPIO.HIGH)
+	time.sleep(0.2)
+	GPIO.output(6, GPIO.LOW)
+	time.sleep(0.2)
+	GPIO.output(6, GPIO.HIGH)
+	time.sleep(0.2)
+	GPIO.output(6, GPIO.LOW)
 
 def shakeyshakey():
-	freq = 0.01
+	freq = 0.05
 	while time.time() - t0 < popcorncookingtime:
-		for i in range(5):
+		for i in range(7):
 			GPIO.output(solenoid, GPIO.HIGH)
 			time.sleep(freq)
 			GPIO.output(solenoid, GPIO.LOW)
@@ -99,8 +85,34 @@ for t in threads:
 
 for t in threads:
 	t.join()
+def march():
+	os.system("clear")
+	os.system("figlet Enjoy your freshly popped corn!")
+	os.system("sudo ./hax")
+	os.system("clear")
 
+def blinkingend():
+	for i in range(20):
+		GPIO.output(22, GPIO.HIGH)
+		time.sleep(1)
+		GPIO.output(22, GPIO.LOW)
+		GPIO.output(23, GPIO.HIGH)
+		time.sleep(1)
+		GPIO.output(23, GPIO.LOW)
+
+
+endthreads = []
+endthreads.append(threading.Thread(target=march))
+endthreads.append(threading.Thread(target=blinkingend))
+
+for t in endthreads:
+	t.start()
+
+for t in endthreads:
+	t.join()
 
 GPIO.cleanup()
+
+os.system("clear")
 
 sys.exit()
